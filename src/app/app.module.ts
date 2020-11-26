@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ChatService } from './services/chat.service';
+import { WebSocketService } from './services/web-socket.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +12,7 @@ import { SettingsComponent } from './settings/settings.component';
 @NgModule({
   declarations: [AppComponent, HighlightDirective, HomeComponent, SettingsComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [ChatService, WebSocketService],
   exports: [],
   bootstrap: [AppComponent],
 })
