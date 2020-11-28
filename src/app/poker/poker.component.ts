@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Socket } from 'socket.io-client';
+
 import { WebSocketService } from '../services/web-socket.service';
 
 @Component({
@@ -16,8 +16,10 @@ export class PokerComponent implements OnInit {
   }
 
   sendMessage() {
-    this.socket.sendMessage(this.chatMessage);
-    this.chatMessage = '';
+    if (this.chatMessage !== '') {
+      this.socket.sendMessage(this.chatMessage);
+      this.chatMessage = '';
+    }
   }
 
   ngOnInit(): void {}
