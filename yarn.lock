@@ -7385,11 +7385,6 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs-compat@^6.6.3:
-  version "6.6.3"
-  resolved "https://registry.yarnpkg.com/rxjs-compat/-/rxjs-compat-6.6.3.tgz#141405fcee11f48718d428b99c8f01826f594e5c"
-  integrity sha512-y+wUqq7bS2dG+7rH2fNMoxsDiJ32RQzFxZQE/JdtpnmEZmwLQrb1tCiItyHxdXJHXjmHnnzFscn3b6PEmORGKw==
-
 rxjs@6.6.3, rxjs@^6.5.3, rxjs@^6.6.0, rxjs@^6.6.3:
   version "6.6.3"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
@@ -8713,7 +8708,7 @@ utils-merge@1.0.1:
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
-uuid@8.3.1:
+uuid@8.3.1, uuid@^8.3.1:
   version "8.3.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.1.tgz#2ba2e6ca000da60fce5a196954ab241131e05a31"
   integrity sha512-FOmRr+FmWEIG8uhZv6C2bTgEVXsHk08kE7mPlrBbEe+c3r9pjceVPgupIfNIhc4yx55H69OXANrUaSuu9eInKg==

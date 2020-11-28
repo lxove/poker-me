@@ -1,0 +1,32 @@
+<input [(ngModel)]="chatMessage" />
+<button (click)="sendMessage()">Send</button>
+<h1>Recieved messages:</h1>
+<div class="chat-wrapper">
+  <p *ngFor="let message of chatMessages$ | async">{{ message.text }}</p>
+</div>
+<div class="main">
+  <div class="table">
+    <div class="board">
+      <div class="card-small">
+        <p class="card-text black">A</p>
+        <p class="card-img black">&clubs;</p>
+      </div>
+      <div class="card-small">
+        <p class="card-text black">10</p>
+        <p class="card-img black">&spades;</p>
+      </div>
+      <div class="card-small">
+        <p class="card-text red">K</p>
+        <p class="card-img red">&hearts;</p>
+      </div>
+      <div class="card-small">
+        <p class="card-text red">Q</p>
+        <p class="card-img red">&diams;</p>
+      </div>
+      <div class="card-small">
+        <p class="card-text red">2</p>
+        <p class="card-img red">&diams;</p>
+      </div>
+    </div>
+  </div>
+</div>

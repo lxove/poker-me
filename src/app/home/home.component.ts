@@ -1,4 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { io } from 'socket.io-client';
+import { WebSocketService } from '../services/web-socket.service';
 
 @Component({
   selector: 'app-home',

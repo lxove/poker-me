@@ -1,6 +1,7 @@
 import { ngModuleJitUrl } from '@angular/compiler';
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { WebSocketService } from './services/web-socket.service';
+import { ObjectUnsubscribedError } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -31,4 +32,8 @@ export class AppComponent {
   // hoverWorld(): void {
   //   console.log("Hover world!");
   // }
+}
+
+export class PokerPlayer {
+  name: string;
 }

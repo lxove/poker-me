@@ -7,10 +7,21 @@ var io = require('socket.io')(http, {
   },
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
+
+// io.on('connection', socket => {
+//   console.log('a user connected');
+//   var data = 'Servern säger hej';
+//   socket.emit('Hello world', data);
+// });
+
 io.on('connection', socket => {
-  console.log('a user connected');
-  var data = 42;
-  socket.emit('Hello world', data);
+  socket.on('send message', msg => {
+    console.log('message: ' + msg);
+    io.emit('recieve message', msg);
+  });
 });
 
 http.listen(3000, () => {
