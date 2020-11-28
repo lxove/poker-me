@@ -1,7 +1,6 @@
-import { ngModuleJitUrl } from '@angular/compiler';
-import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
+
 import { WebSocketService } from './services/web-socket.service';
-import { ObjectUnsubscribedError } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +11,7 @@ export class AppComponent {
   navigator: Navigator;
   window: Window;
 
-  constructor(private socket: WebSocketService) {
-    socket.connect();
-  }
+  constructor(private socket: WebSocketService) {}
 
   ngOnInit() {}
 

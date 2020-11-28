@@ -1,8 +1,6 @@
-import { Message } from '@angular/compiler/src/i18n/i18n_ast';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { io } from 'socket.io-client';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +15,7 @@ export class WebSocketService {
   }
 
   constructor() {
-    this.socket = io(environment.ws_url);
+    this.socket = io('localhost:3000');
     this.socket.on('msgFromServer', data => {
       let chatMessage: ChatMessage = { text: data, self: false };
       console.log(data);
@@ -25,17 +23,10 @@ export class WebSocketService {
     });
   }
 
-  connect() {
-    this.socket.on('Hello world', data => {
-      console.log('Meddelande från server:');
-      console.log(data);
-    });
-  }
-
   sendMessage(msg: string) {
     console.log(`sending message: ${msg}`);
     let sMessage: ChatMessage = { text: msg, self: true };
-    // this.updateMessages(sMessage);
+    this.updateMessages(sMessage);
     this.socket.emit('msgToServer', msg);
   }
 

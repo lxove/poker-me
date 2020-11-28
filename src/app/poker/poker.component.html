@@ -1,10 +1,18 @@
-<input [(ngModel)]="chatMessage" />
-<button (click)="sendMessage()">Send</button>
-<h1>Chat:</h1>
-<div class="chat-wrapper">
-  <p *ngFor="let message of chatMessages$ | async">{{ message }}</p>
+<div class="uk-grid" uk-grid>
+  <div class="uk-padding">
+    <div class="my-pretty-box uk-padding">
+      <div class="uk-margin uk-button-group" uk-margin>
+        <input class="uk-input" [(ngModel)]="chatMessage" />
+        <button class="uk-button" (click)="sendMessage()">Send</button>
+      </div>
+      <h1>Chat:</h1>
+      <div class="chat-wrapper">
+        <p *ngFor="let message of chatMessages$ | async">{{ message.text }}</p>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="main">
+<!-- <div class="main ">
   <div class="table">
     <div class="board">
       <div class="card-small">
@@ -29,4 +37,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
