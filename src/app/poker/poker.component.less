@@ -1,0 +1,83 @@
+@import '../../styles/colors.less';
+.chat-wrapper {
+  width: 500px;
+  min-height: 100px;
+}
+
+.my-pretty-box {
+  border-radius: 20px;
+  background: @pale-pink;
+  box-shadow: 0 0 10px 4px #ff4c4c29;
+  .uk-button-group {
+    width: 100%;
+  }
+}
+
+.chat-bubble {
+  background: white;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  max-width: 50%;
+  box-shadow: 0 0 7px 7px #e7cfcd;
+  &.self {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+    min-width: 100px;
+  }
+}
+
+.uk-button {
+  background: @thistle;
+}
+
+.main {
+  width: 1000px;
+}
+
+.table {
+  background-color: lightgrey;
+  height: 500px;
+  width: 80%;
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 0.3em solid black;
+}
+
+.board {
+  position: relative;
+  top: 40%;
+  left: 30%;
+}
+.card-small {
+  border: 0.1em solid black;
+  border-radius: 5%;
+  height: 80px;
+  width: 56px; /*70% of height*/
+  margin-right: 5px;
+  float: left;
+  background-color: white;
+}
+
+.card-text {
+  margin: 0;
+  margin-top: 15%;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0;
+}
+
+.card-img {
+  text-align: center;
+  margin: 0;
+  font-size: 2em;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
