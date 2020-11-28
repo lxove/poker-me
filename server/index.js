@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
 // });
 
 io.on('connection', socket => {
-  socket.on('send message', msg => {
+  socket.on('msgToServer', msg => {
     console.log('message: ' + msg);
-    io.emit('recieve message', msg);
+    io.broadcast.emit('msgFromServer', msg);
   });
 });
 

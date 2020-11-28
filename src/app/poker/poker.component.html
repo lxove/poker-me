@@ -1,8 +1,8 @@
 <input [(ngModel)]="chatMessage" />
 <button (click)="sendMessage()">Send</button>
-<h1>Recieved messages:</h1>
+<h1>Chat:</h1>
 <div class="chat-wrapper">
-  <p *ngFor="let message of chatMessages$ | async">{{ message.text }}</p>
+  <p *ngFor="let message of chatMessages$ | async">{{ message }}</p>
 </div>
 <div class="main">
   <div class="table">

@@ -18,7 +18,7 @@ export class WebSocketService {
 
   constructor() {
     this.socket = io(environment.ws_url);
-    this.socket.on('recieve message', data => {
+    this.socket.on('msgFromServer', data => {
       let chatMessage: ChatMessage = { text: data, self: false };
       console.log(data);
       this.updateMessages(chatMessage);
@@ -35,8 +35,8 @@ export class WebSocketService {
   sendMessage(msg: string) {
     console.log(`sending message: ${msg}`);
     let sMessage: ChatMessage = { text: msg, self: true };
-    this.updateMessages(sMessage);
-    this.socket.emit('send message', msg);
+    // this.updateMessages(sMessage);
+    this.socket.emit('msgToServer', msg);
   }
 
   updateMessages(message: ChatMessage) {
