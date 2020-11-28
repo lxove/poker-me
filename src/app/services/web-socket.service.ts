@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Subscription } from 'rxjs';
 import { io } from 'socket.io-client';
 
 @Injectable({
